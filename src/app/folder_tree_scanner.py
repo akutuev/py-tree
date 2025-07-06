@@ -1,7 +1,6 @@
-import sys
 from typing import List, Self
-from os import listdir, getcwd
-from os.path import isfile, join, dirname, basename
+from os import listdir
+from os.path import isdir, join, basename
 from enum import Enum
 
 class DirectoryType(Enum):
@@ -14,7 +13,7 @@ class DirectoryType(Enum):
 class DirectoryItem:
     name: str
     type: DirectoryType
-    child_items: List[Self]
+    child_items: List[Self] = []
 
     def __init__(self, name, type, child_items):
         self.name = name
@@ -32,7 +31,7 @@ def _get_folder_childs(path: str) -> List[DirectoryItem]:
     child_items = []
     for child_item_name in listdir(path):
         child_full_path = join(path, child_item_name)
-        child_type = DirectoryType.FILE if isfile(child_full_path) else DirectoryType.FOLDER
+        child_type = DirectoryType.FOLDER if isdir(child_full_path) else DirectoryType.FILE
 
         child_item = DirectoryItem(
            name=child_item_name, 

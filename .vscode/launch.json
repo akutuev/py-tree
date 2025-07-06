@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/src/app/cli.py",
             "console": "integratedTerminal",
-            "args": ["--some-arg", "value"]
+            "args": ["C:\\Work\\"]
         }
     ]
 }
