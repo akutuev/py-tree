@@ -1,8 +1,7 @@
 FROM python:3.13.5-slim
 
-COPY . .
-
 WORKDIR /app
 
+COPY . .
 
-CMD ["python", "cli.py"]
+ENTRYPOINT  ["python", "-m", "app.cli"]

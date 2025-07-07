@@ -1,5 +1,5 @@
 from typing import List
-from folder_tree_scanner import DirectoryItem
+from app.folder_tree_scanner import DirectoryItem
 
 
 def visualize_in_console(item: DirectoryItem):

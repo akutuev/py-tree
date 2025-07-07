@@ -5,12 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug CLI app",
+            "name": "Debug CLI module",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/src/app/cli.py",
+            "module": "app.cli",
             "console": "integratedTerminal",
-            "args": ["C:\\Work\\"]
         }
     ]
 }
