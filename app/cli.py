@@ -1,8 +1,8 @@
 from os import getcwd
 import sys
 
-from folder_tree_scanner import get_master_folder_tree
-from folder_tree_visualizer import visualize_in_console
+from app.folder_tree_scanner import get_master_folder_tree
+from app.folder_tree_visualizer import visualize_in_console
 
 def main():
     default_path = sys.argv[1] if len(sys.argv) > 1 else getcwd()
