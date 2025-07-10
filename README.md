@@ -8,3 +8,5 @@ Py-tree - Python CLI program to visualize folder hierarchy in tree-style format
 
 - To run a specific windows directory: ```example to be added```
 - To run a specific Linux directory: ```docker run -v "/your/external/path/:/app/data" py-tree /app/data```
+
+![screenshot](img/screen.png)
