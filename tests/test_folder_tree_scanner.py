@@ -1,7 +1,7 @@
 from pathlib import Path
 from app.folder_tree_scanner import DirectoryItem, DirectoryType, get_master_folder_tree
 
-def test_get_master_folder_tree(tmp_path: Path):
+def test_get_master_folder_tree_with_nested_dirs_and_files(tmp_path: Path):
     structure = [
         "dir_1",
             "dir_1/dir_1_1",
@@ -40,7 +40,7 @@ def test_get_master_folder_tree(tmp_path: Path):
     assert sorted_master_child_items[2].type == DirectoryType.FILE
 
 
-def test_get_master_only_files(tmp_path: Path):
+def test_get_master_folder_tree_with_only_files(tmp_path: Path):
     structure = [
         "file.txt",
         "file_1.txt",
